@@ -1,6 +1,8 @@
 function findNumber(array) {
-  for (i = 1; i < array.length; i++) {
-    if (array.indexOf(i) === -1) {
+  const orded = array.sort((a,b) => a-b);
+  // console.log("findNumber -> orded", orded.length)
+  for (i = 1; i < orded.length +1; i++) {
+    if (orded.indexOf(i) === -1) {
       break;
     }
   }
