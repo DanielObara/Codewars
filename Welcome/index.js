@@ -27,4 +27,24 @@ function greet(language) {
   return restult;
 }
 
-console.log("greet -> greet", greet("spanish"));
+const greet2 = (language) => languages[language] || languages["english"];
+
+const sports = {
+  'karate': 'Karateca',
+  'judo': 'Judoca',
+  'boxe': 'Boxeador',
+  'ciclismo': 'Ciclista',
+  'natacao': 'Nadador',
+  'corrida': 'Corredor'
+}
+
+//Primeiro resultado 
+const restult = sport => sports[sport] ? sports[sport] : "Atleta";
+
+//Seguno resultado
+const restult2 = sport => sports[sport] || "Atleta";
+
+console.log("greet -> greet", restult("karate"));
+console.log("greet -> greet", restult("kardddate"));
+console.log("greet -> greet", restult2("ciclismo"));
+console.log("greet -> greet", restult2("asdads"));
